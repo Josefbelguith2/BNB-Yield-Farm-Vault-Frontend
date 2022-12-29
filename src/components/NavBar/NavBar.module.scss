@@ -1,0 +1,200 @@
+@import 'variables.scss';
+
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-grow: 0;
+  justify-content: space-between;
+  padding: 1.5rem;
+
+  @media screen and (max-width: 600px) {
+    font-size: 10px;
+  }
+
+  @media screen and (max-width: 950px) {
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 900px) {
+    font-size: 12px;
+  }
+
+  .logoGroup {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    .logoText {
+      display: flex;
+      align-items: flex-end;
+      .title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.3rem;
+        margin-left: 10px;
+        color: $primaryColor;
+        @media screen and (max-width: 320px) {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .logo {
+      height: 2.5rem;
+      line-height: 1.3rem;
+
+      @media screen and (max-width: 320px) {
+        height: 2rem;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      margin-left: 0;
+    }
+  }
+
+  .navLinks {
+    .navLink {
+      flex-grow: 0;
+      color: $primaryColor;
+      margin: 0.75rem 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      padding: 19px 30px;
+      margin: 5px;
+
+      &.active {
+        color: $primaryColor;
+        border-bottom: 4px solid $primaryColor;
+      }
+
+      &.disabled {
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 950px) {
+      margin-top: 20px;
+    }
+
+    @media screen and (max-width: 800px) {
+      margin-top: 15px;
+      justify-content: center;
+      align-items: center;
+      // flex-direction: column;
+    }
+
+    .account {
+      color: $primaryColor;
+      border-radius: 30px;
+      font-weight: bolder;
+      padding: 11.25px 10px;
+      margin-right: 10px;
+      width: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .secondaryButton {
+      font-family: Nunito;
+      color: #008eb0;
+      border: 1px solid $primaryColor;
+      border-radius: 30px;
+      padding: 12px 20px;
+      margin-right: 10px;
+      font-weight: bolder;
+      cursor: pointer;
+      transition: 0.1s linear all;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+
+      &:hover {
+        background: $primaryColor;
+        color: #fff;
+      }
+
+      @media screen and (max-width: 900px) {
+        margin: 10px;
+      }
+    }
+
+    .btn {
+      font-family: Nunito;
+      color: white;
+      background-color: $primaryColor;
+      height: 40px;
+      border-radius: 30px;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+
+      font-style: normal;
+      font-weight: bolder;
+      font-size: 12px;
+      line-height: 15px;
+      color: #ffffff;
+
+      text-transform: uppercase;
+      white-space: nowrap;
+
+      outline: none;
+      border: none;
+      cursor: pointer;
+      justify-content: center;
+      transition: all 0.1s ease-in-out;
+      width: 195px !important;
+
+      @media screen and (max-width: 900px) {
+        margin: 10px;
+      }
+    }
+
+    .btnText {
+      @media screen and (max-width: 350px) {
+        margin-top: 2px;
+      }
+    }
+  }
+}
+
+.logoText {
+  display: flex;
+}
+
+.purpleColor {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  color: #008eb0;
+}
+
+@media screen and (max-width: 380px) {
+  .navbar {
+    padding: 0.7rem 0.3rem;
+  }
+
+  .logoGroup {
+    margin-left: 0 !important;
+    font-family: Nunito;
+    .title {
+      margin-left: 2px !important;
+    }
+  }
+
+  .btn {
+    width: 120px !important;
+  }
+}

@@ -1,0 +1,65 @@
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 90%;
+
+  @media screen and (max-width: 700px) {
+    height: 100%;
+    justify-content: flex-start;
+  }
+
+  .modeSelectContainer {
+    display: flex;
+    margin-bottom: 20px;
+    width: 100%;
+    gap: 30px;
+
+    @media screen and (max-width: 700px) {
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    button {
+      width: 50%;
+      background: transparent;
+      border: none;
+      border: 1.5px solid #008eb0;
+      color: #008eb0;
+      font-weight: bolder;
+      font-size: 16px;
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      outline: none;
+      cursor: pointer;
+      border-radius: 12px;
+      padding: 10px;
+      height: 50px;
+      font-family: Nunito;
+      &.active {
+        background: #008eb0;
+        color: #fff;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+
+      @media screen and (max-width: 700px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.toastContainer {
+  margin-top: 100px;
+  margin-right: 35px;
+  @media (max-width: 768px) {
+    margin-top: 0;
+  }
+}
