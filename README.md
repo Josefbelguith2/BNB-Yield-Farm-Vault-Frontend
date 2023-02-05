@@ -1,4 +1,4 @@
-# Staking Frontend Template
+# BNB-Yield-Farm-Vault-Frontend
 
 # Instructions
 
